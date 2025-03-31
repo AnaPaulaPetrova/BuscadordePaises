@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=MedievalSharp&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  padding: 10px;
+  font-family: "MedievalSharp";
+}
+header {
+  width: 100%;
+  height: 350px;
+  background-size: cover;
+  background-image: url(Images/paisagemProjeto.jpg);
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+button{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-top: 5px;
+  margin-left: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}
+.subHeader {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+  border-radius: 8px;
+  width: 100%;
+  height: 40%;
+  gap: 10px;
+  color: aliceblue;
+}
+.allCountries {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.country {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 5px black;
+  font-weight: bold;
+  border-radius: 8px;
+  gap: 5px;
+  transition: opacity 200ms ease;
+  flex-wrap: wrap;
+  max-width: 200px;
+}
+.country:hover {
+  cursor: pointer;
+  transform: scale(1.05, 1.05);
+  transition: ease 200ms;
+}
+.allCountries:hover > :not(:hover) { /*Torna visível apenas a div que o maouse seleciona*/
+    opacity: 0.3;
+}
+#paises {
+    width: 400px;
+    height: 40px;
+    border-radius: 8px;
+    border-color: rgb(92, 90, 90);
+    outline: none;
+    box-shadow: 0 2px rgb(144, 142, 142);   
+}
+h1 {
+  padding-top: 10px;
+  text-align: center;
+  text-shadow: 0 0 15px white;
+}
+h1:after{
+  content: "";
+  font-weight: 20px;
+  font-size: 35px;
+  color: rgb(11, 11, 11);
+  animation-name: animatingtext;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  
+}
+@keyframes animatingtext { /* variavel criada la em cima, aqui defini como queria que ela funcionace*/
+  0% { content: "B"; }
+  10% { content: "Bu"; }
+  15% { content: "Bus"; }
+  20% { content: "Busc"; }
+  30% { content: "Busca"; }
+  40% { content: "Buscar"; }
+  50% { content: "Buscar "; }
+  60% { content: "Buscar P"; }
+  70% { content: "Buscar Pa"; }
+  80% { content: "Buscar Paí"; }
+  85% { content: "Buscar País"; }
+  90% { content: "Buscar Paíse"; }
+  100% { content: "Buscar Países "; }
+}
+input[type="radio"] {
+  width: 18px; /* Tamanho do botão */
+  height: 18px; /* Tamanho do botão */
+  border: 2px solid rgb(61, 63, 164); /* Cor da borda verde */
+  border-radius: 50%; /* Deixa o botão redondo */
+  background-color: white; /* Cor de fundo */
+  transition: all 0.3s ease; /* Transição suave */
+  appearance: none; /* Remove a aparência padrão do botão */
+  outline: none; /* Remove o contorno do botão */
+  cursor: pointer;
+}
+input[type="radio"]:checked {
+  background-color: rgb(11, 14, 133); /* Cor de fundo quando selecionado */
+  border-color: rgb(31, 44, 134); /* Cor da borda quando selecionado */
+}
+input[type="radio"]:hover {
+  border-color: rgb(22, 30, 177); /* Cor da borda quando o mouse passa sobre o botão */
+  box-shadow: 0 0 5px rgba(12, 42, 161, 0.5); /* Efeito de brilho */
+}
+input[type="text"] {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.country img {
+  display: block; /* Garante que a imagem fique sozinha na linha */
+}
+/* Segunda pagina */
+#main {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: rgb(230, 231, 231);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 8px; 
+  margin-top: -40px;
+}
+
+#flags {
+  width: 100%;
+  aspect-ratio: 16/9;
+  max-width: 350px;
+  min-width: 100px;
+  max-height: 250px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+}
+
+.detalhes-pais {
+  display: flex; 
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.titulo {
+  border-radius: 8px;
+  background-color: rgb(232, 226, 226);
+  border-color: rgb(16, 20, 16);
+  color: rgb(31, 44, 31);
+  text-shadow: 0 0 7px #212821, 0 0 10px #444846;
+  font-weight: bolder;
+  font-size: 28px;
+  text-align: justify;
+}
+
+.idioma, .capital, .continente, .moeda, .populacao, .area, .link, .descricao {
+  width: 350px;
+  border: rgb(68, 68, 68);
+  color: rgb(29, 29, 31);
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+.idioma > p > span {
+  color: red;
+  font-weight: bold;
+  font-size: 25px;
+}
+
